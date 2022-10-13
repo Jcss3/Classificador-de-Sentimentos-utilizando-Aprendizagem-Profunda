@@ -1,0 +1,37 @@
+
+
+
+Project Sentiment Classifier (DL) - Estudo sobre analise de sentimento textual usando DL
+
+1 load Dataset
+    dataset do kaggle
+    carregar datasets de treinamento e validação
+
+2 Encodificar Labels
+
+3 Remoção de valores Nulos/NaN dentro do dataset de treino
+
+4 Processing text
+	Removing stopwords
+	cleaning punctuations
+	lemmatization
+	removing duplicate caracters
+	
+5 Embeddings - creating vectors to represent sentences
+	pre trained models - Bert
+    vectorizer/tokenizer
+	
+5 DL Architecture
+    inputs: arrays de embeddings(cada emb representa uma sentenca encodificada)
+    labels: array de encodes das labels(Ex: 3-pos,2-neutral,1-negative )
+    
+    Dimensions
+    Shape de vector_emb: (61121, 810)
+    Shape de bert_emb: (61121, 768)
+    
+    Dimension after reshape para passar para as camadas lstm
+    Shape de input vector_emb: (61121, 810, 1)
+    Shape de input bert_emb: (61121, 768, 1)
+    Shape de output labels: (61121,)
+    
+6 Training of model
